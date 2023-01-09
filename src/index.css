@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+:root {
+  font-size: 16px;
+  --gray: #808080;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,4 +16,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 992px) {
+  :root {
+      font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+      font-size: 12px;
+  }
 }
