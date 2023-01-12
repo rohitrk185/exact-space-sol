@@ -33,19 +33,7 @@ function Chat() {
     const messagesEndRef = useRef(null);
 
     const [curMessage, setCurMessage] = useState('');
-    const [messages, setMessages] = useState([{
-        username: "Dean",
-        text: "Hey Everyone!",
-        avatarName: "DE",
-        likes: 0,
-        timestamp: '14:30',
-    }, {
-        username: "Bob",
-        text: "Hey Everyone! Hey Everyone! Hey Everyone!",
-        avatarName: "BO",
-        likes: 0,
-        timestamp: '15:30',
-    }]);
+    const [messages, setMessages] = useState([]);
 
     async function searchMention(text) {
         if (!text) {
