@@ -34,6 +34,10 @@
     margin-left: .5rem;
 }
 
+.text-blue {
+    color:#44acec;
+}
+
 
 /* Chat-Header */
 #heading {
@@ -82,13 +86,19 @@ hr {
 /* Chat-Box */
 main {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex: 1 0;
+    gap: 1rem 0;
+    overflow: hidden;
 }
 
 #chat-messages{
     list-style-type: none;
     flex-direction: column;
     gap: 2rem 0;
+    overflow-y: auto;
 }
 
 #chat-messages .message-item {
@@ -120,6 +130,7 @@ main {
     padding: .7rem 1.5rem .7rem 1rem;
     border-radius: 0 1rem 1rem 1rem;
     position: relative;
+
 }
 
 #chat-messages .message-item .message-main .message-content p:nth-child(2) {
@@ -128,25 +139,22 @@ main {
     bottom: 0;
 }
 
-#chat-form{
-    position: absolute;
-    bottom: .2rem;
-    left: -.6rem;
-    right: -.6rem;
+#chat-form {
     border: 1px solid var(--gray);
     border-radius: 1rem;
-    gap: 0 .8rem;
-    padding: .4rem 1.3rem;
-    padding-right: 1rem;
+    /* padding: .4rem 1.3rem; */
+    /* padding-right: 1rem; */
 }
 
-#chat-form input {
+/* #chat-form .input {
     border: 0;
     flex: 1 0;
     background: none;
+    background-color: transparent;
     font-size: 1.05rem;
     letter-spacing: .3px;
-}
+    margin: 0;
+} */
 
 
 /* Media Queries */
@@ -166,4 +174,69 @@ main {
     .chat-container {
         width: 95dvw;
     }
+}
+
+
+
+
+
+
+
+
+/* Mention Styles */
+.mentions {
+    margin: 1rem 0;
+    background-color: transparent;
+}
+
+.mentions--singleLine .mentions__control {
+    display: inline-block;
+    background-color: transparent;
+}
+
+.mentions--singleLine .mentions__higlighter {
+    padding: 1px;
+    border: 2px inset transparent;
+}
+.mentions--singleLine .mentions__input {
+    padding: 5px;
+    border: 2px inset;
+}
+
+.mentions--multiLine .mentions__control {
+    font-family: monospace;
+    font-size: 14pt;
+    /* border: 1px solid silver; */
+}
+.mentions--multiLine .mentions__highlighter {
+padding: 9px;
+}
+.mentions--multiLine .mentions__input {
+padding: 9px;
+min-height: 63px;
+outline: 0;
+border: 0;
+background-color: transparent;
+}
+
+.mentions__suggestions__list {
+background-color: white;
+border: 1px solid rgba(0, 0, 0, 0.15);
+font-size: 10pt;
+position: relative;
+bottom: 8rem;
+left: 8rem;
+}
+
+.mentions__suggestions__item {
+padding: 5px 15px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.mentions__suggestions__item--focused {
+background-color: #cee4e5;
+}
+
+.mentions__mention {
+background-color: #cee4e5;
 }
