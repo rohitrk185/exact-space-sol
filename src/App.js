@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <h1 id='heading'>Welcome</h1>
+      {/* <h1 id='heading'>Welcome</h1> */}
       <div className='chat-container flex'>
         <Header />
         <hr />

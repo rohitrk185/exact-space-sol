@@ -118,7 +118,6 @@ function Chat() {
                     cleanOnEnter
                     onEnter={onsubmit}
                     placeholder="Type Message... (use '@' to mention, 'enter' to send message)"
-                    height= {10}
                     theme='dark'
                     searchMention={searchMention}
                 />
